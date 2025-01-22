@@ -28,6 +28,8 @@ const LoginPage: React.FC<Props> = ({ navigation }) => {
       {/* Logo */}
       <Image source={require('../Icons/logo.png')} style={styles.logo} />
 
+      <Text style={styles.title}>Bienvenido!</Text>
+
       {/* Campos de entrada */}
       <View style={styles.inputContainer}>
         <TextInput
@@ -66,7 +68,7 @@ const LoginPage: React.FC<Props> = ({ navigation }) => {
       {/* Texto inferior */}
       <View style={styles.footerContainer}>
       <Text style={styles.footerText}>¿No tienes cuenta?</Text>
-      <TouchableOpacity onPress={() => alert('Funcionalidad de REGISTRARSE')}>
+      <TouchableOpacity onPress={() => navigation.navigate('RegisterForm')}>
         <Text style={styles.registerText}> Regístrate</Text>
       </TouchableOpacity>
     </View>
@@ -89,6 +91,12 @@ const styles = StyleSheet.create({
   inputContainer: {
     width: '80%',
     marginBottom: 40,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#fff',
+    marginBottom: 20,
   },
   input: {
     borderBottomWidth: 1,
