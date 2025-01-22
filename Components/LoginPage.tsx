@@ -16,7 +16,7 @@ const LoginPage: React.FC<Props> = ({ navigation }) => {
   const [checked, setChecked] = useState(false);
 
   const handleLogin = () => {
-    if (email === 'sebas' && password === '123456') {
+    if (email === '123' && password === '123') {
       navigation.navigate('NavigationBar');
     } else {
       alert('Credenciales incorrectas');
